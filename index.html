@@ -15,18 +15,18 @@
 	<br>
 	<div>
 			<span class="input-group-addon" id="name">First Name</span>
-			<input type="text" class="form-control" aria-describedby="name" minlength="3" maxlength="60" value="" id="name" name="name" placeholder="firstname" pattern="[a-zA-Zа-яА-ЯёЁ]+" required>
-			<span class="glyphicon form-control-feedback" aria-hidden="true"></span>	
+			<input type="text" class="form-control" aria-describedby="name" id="name" name="name" placeholder="firstname" pattern=".{3,60}[a-zA-Zа-яА-ЯёЁ]+" required>
+			<span aria-hidden="true"></span>	
 	</div>
 	<div>
 			<span class="input-group-addon" id="secondname">Second Name</span>
-			<input type="text" class="form-control" aria-describedby="secondname" minlength="5" maxlength="11" value="" name="secondname" placeholder="secondname" pattern="[a-zA-Zа-яА-ЯёЁ]+" required>
-			<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<input type="text" class="form-control" aria-describedby="secondname" name="secondname" placeholder="secondname" pattern=".{5,11}[a-zA-Zа-яА-ЯёЁ]+" required>
+			<span aria-hidden="true"></span>
 	</div>
 	<div>
 			<span class="input-group-addon" id="email">E-mail</span>
-			<input type="email" class="form-control" aria-describedby="email" name="email" value="" placeholder="E-mail" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
-			<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<input type="email" class="form-control" aria-describedby="email" name="email" placeholder="E-mail" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+			<span aria-hidden="true"></span>
 	</div>
 	<div>
 	<select class="form-control" id="gender" name="gender" required>
@@ -38,16 +38,16 @@
 	<div>
 		<span class="input-group-addon" id="pass">Password</span>
 		<input type="text" class="form-control" aria-describedby="password" value="" name="pass" placeholder="Password" pattern="[a-zA-Z0-9]+" required>
-		<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<span aria-hidden="true"></span>
 	</div>
 	<div>
 		<label>
-			<input type="checkbox" value="check" required>
+			<input id="agree" type="checkbox" value="check" required>
 			Conditions of Agreement
 		</label>
 	</div>
 	<div>
-		<button type="submit" id="submit" class="btn btn-primary">Send</button>
+		<button type="submit" id="submit" class="btn btn-primary" style="display='none';">Send</button>
 	</div>
 </form>
 <div id="result"></div>
