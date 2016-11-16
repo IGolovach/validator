@@ -46,9 +46,10 @@ function get_result() {
           data: msg,         
 		  success: function(data) {
 			alert(data.message);
+			if(data.status == "OK"){window.location.replace("company.html");}
 			$.getJSON('http://codeit.pro/frontTestTask/user/registration', function(data) {
 				//$('#result').append('<p>' + data.message +'; ' + data.status + '</p>');					
-        });
+		  });
           },
           error:  function(){
 			alert('Возникла ошибка');
